@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hearing Sheet | 制作ヒアリング</title>
+    <link rel="stylesheet" href="hearing.css">
+</head>
+<body>
+
+    <section id="hearing" class="reveal">
+        <div class="container">
+            <h2 class="section-title" data-en="Hearing Sheet">制作ヒアリングシート</h2>
+            
+            <div class="contact-container">
+                <div class="contact-message anim-fade-up" style="transition-delay: 0.1s;">
+                    <h3>理想を形にするための対話を</h3>
+                    <p>ご回答内容に基づき、最適なプランと概算のお見積りをご提案いたします。</p>
+                </div>
+
+                <form action="https://formspree.io/f/xreawbbl" method="POST" class="hearing-form">
+                    
+                    <div class="form-section anim-fade-up" style="transition-delay: 0.2s;">
+                        <h4 class="form-section-title">01. 基本情報</h4>
+                        <div class="field">
+                            <label for="h-name">お名前 / 貴社名 <span class="required-tag">必須</span></label>
+                            <input type="text" id="h-name" name="name" required placeholder="例：山田 太郎 / 株式会社サンプル">
+                        </div>
+                        <div class="field">
+                            <label for="h-email">メールアドレス <span class="required-tag">必須</span></label>
+                            <input type="email" id="h-email" name="email" required placeholder="example@mail.com">
+                        </div>
+                        <div class="field">
+                            <label for="h-url">既存サイトURL（ある場合）</label>
+                            <input type="url" id="h-url" name="current_url" placeholder="https://...">
+                        </div>
+                    </div>
+
+                    <div class="form-section anim-fade-up" style="transition-delay: 0.3s;">
+                        <h4 class="form-section-title">02. 制作について</h4>
+                        <div class="field">
+                            <label>制作の主な目的（複数選択可）</label>
+                            <div class="form-checkbox-group">
+                                <label class="checkbox-item"><input type="checkbox" name="purpose" value="集客"> 集客・売上アップ</label>
+                                <label class="checkbox-item"><input type="checkbox" name="purpose" value="信頼性"> 認知度・信頼性向上</label>
+                                <label class="checkbox-item"><input type="checkbox" name="purpose" value="採用"> 採用の強化</label>
+                                <label class="checkbox-item"><input type="checkbox" name="purpose" value="更新"> 自身での更新・運用</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="h-target">ターゲット層（性別・年代・悩みなど）</label>
+                            <textarea id="h-target" name="target" rows="3" placeholder="例：30代女性、都内在住、仕事と育児を両立している方"></textarea>
+                        </div>
+                        <div class="field">
+                            <label for="h-vibe">希望するデザインの雰囲気</label>
+                            <select id="h-vibe" name="design_vibe">
+                                <option value="">選択してください</option>
+                                <option value="simple">シンプル・清潔感</option>
+                                <option value="luxury">高級感・スタイリッシュ</option>
+                                <option value="pop">明るい・ポップ</option>
+                                <option value="business">堅実・ビジネスライク</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-section anim-fade-up" style="transition-delay: 0.4s;">
+                        <h4 class="form-section-title">03. プラン・予算・納期</h4>
+
+                        <div class="field">
+                            <label>ご希望のメインプラン</label>
+                            <div class="form-checkbox-group">
+                                <label class="checkbox-item"><input type="radio" name="plan" value="高速LP"> 高速LP (通常 ¥80,000~)</label>
+                                <label class="checkbox-item"><input type="radio" name="plan" value="スタンダード"> スタンダード (通常 ¥120,000~)</label>
+                                <label class="checkbox-item"><input type="radio" name="plan" value="プレミアム"> プレミアム (通常 ¥160,000~)</label>
+                                <label class="checkbox-item"><input type="radio" name="plan" value="相談" checked> 相談して決めたい</label>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label>実績としての公開許可（実績掲載割引）</label>
+                            <select name="portfolio_permission">
+                                <option value="希望する">許可する（1〜2万円の割引を適用）</option>
+                                <option value="希望しない">許可しない（通常価格で依頼する）</option>
+                            </select>
+                            <p style="font-size: 0.75rem; color: var(--main-gold); margin-top: 8px;">
+                                ※ポートフォリオ掲載許可で、制作費から10,000円〜20,000円割引いたします。
+                            </p>
+                        </div>
+
+                        <div class="field">
+                            <details class="option-accordion">
+                                <summary>追加オプション・修正メニューをすべて見る</summary>
+                                <div class="option-content">
+                                    
+                                    <p class="option-category-title">【制作・デザインオプション】</p>
+                                    <div class="form-checkbox-group">
+                                        <label class="checkbox-item"><input type="checkbox" name="opt" value="追加ページ"> 追加ページ (+¥10,000~/枚)</label>
+                                        <label class="checkbox-item"><input type="checkbox" name="opt" value="アニメーション"> デザイン複雑化・アニメ (+¥8,000~¥12,000)</label>
+                                        <label class="checkbox-item"><input type="checkbox" name="opt" value="写真追加"> 写真追加 (+¥500/枚 ※5枚まで無料)</label>
+                                        <label class="checkbox-item"><input type="checkbox" name="opt" value="お急ぎ"> お急ぎ納品 (制作費の+20%~30%)</label>
+                                        <label class="checkbox-item"><input type="checkbox" name="opt" value="大幅変更"> 大幅なデザイン変更 (¥10,000~)</label>
+                                    </div>
+
+                                    <p class="option-category-title">【システム・導入サポート】</p>
+                                    <div class="form-checkbox-group">
+                                        <label class="checkbox-item"><input type="checkbox" name="opt" value="Firebase"> Firebase等システム実装 (+¥30,000~)</label>
+                                        <label class="checkbox-item"><input type="checkbox" name="opt" value="サーバー開設"> サーバー・ドメイン開設代行 (+¥10,000)</label>
+                                    </div>
+
+                                    <p class="option-category-title">【納品後のサポート / 修正】</p>
+                                    <div class="form-checkbox-group">
+                                        <label class="checkbox-item"><input type="radio" name="support" value="なし" checked> 不要（納品のみ）</label>
+                                        <label class="checkbox-item"><input type="radio" name="support" value="単発修正"> 単発スポット修正 (¥2,000~/箇所)</label>
+                                        <label class="checkbox-item"><input type="radio" name="support" value="ちょこっと運用"> ちょこっと運用サポート (月額 ¥3,000~)</label>
+                                        <label class="checkbox-item"><input type="radio" name="support" value="保守標準"> 運用保守スタンダード (月額 ¥7,000~)</label>
+                                    </div>
+
+                                    <p class="option-note">
+                                        ※修正は各プラン規定回数まで無料です。<br>
+                                        ※運用サポート・保守は年払いで1ヶ月分お得になります。
+                                    </p>
+                                </div>
+                            </details>
+                        </div>
+
+                        <div class="field">
+                            <label for="h-budget">ご予算の目安</label>
+                            <input type="text" id="h-budget" name="budget" placeholder="例：15万円以内など">
+                        </div>
+
+                        <div class="field">
+                            <label for="h-deadline">希望納期</label>
+                            <input type="date" id="h-deadline" name="deadline">
+                        </div>
+                    </div>
+
+                    <div class="pricing-cta-container anim-fade-up" style="transition-delay: 0.5s;">
+                        <p style="margin-bottom: 20px; font-size: 0.8rem; color: var(--text-sub);">内容にお間違いがなければ、以下のボタンから送信してください。</p>
+                        <button type="submit" class="btn-sub-gold shine-effect">この内容で送信する</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+</body>
+</html>
